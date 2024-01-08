@@ -25,7 +25,7 @@ White: hsl(0, 0%, 100%)
     position: relative;
 }
 .age-container{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -99,12 +99,13 @@ White: hsl(0, 0%, 100%)
    border-radius: 50%;
    z-index: 1000000!important;
    cursor: pointer;
+   position: absolute;
 }
-.btn-cont button::before{
+.btn-cont::before{
     position: absolute;
     content: '';
-    width: 71.5%;
-    top:38% ;
+    width: 75%;
+    top:33% ;
     left: 9%;
     right: 75% ;
     background: hsl(0, 0%, 86%);
@@ -114,6 +115,8 @@ White: hsl(0, 0%, 100%)
 .age-result {
     font-size: 35px;
     font-weight: bolder!important;
+    position: absolute;
+    top: 40%;
    
 }
 .age-result h2 i{
@@ -133,4 +136,116 @@ span{
 .validate{
     display: block;
 
+}
+/* @media screen and (max-width: 620px){
+    .age-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 340px;
+        width: 100%;
+        height: 540px;
+        background: hsl(0, 0%, 100%);
+        border-bottom-right-radius: 25%;
+        border-top-right-radius:20px ;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        padding: 30px 20px 0px;
+        margin: 0px auto 0px;
+    }
+} */
+@media screen and (max-width: 620px) and (min-width: 375px) {
+    .age-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 340px;
+        width: 100%;
+        height: 540px;
+        background: hsl(0, 0%, 100%);
+        border-bottom-right-radius: 25%;
+        border-top-right-radius:20px ;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        padding: 30px 20px 0px;
+        margin: 0px auto 0px;
+    }
+    .date-container .form{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        position: relative;
+    
+    }
+    .cont input{
+        border: 1px solid hsl(0, 0%, 86%)!important;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 800;
+        padding: 10px 0px 10px 6px;
+        width: 80px !important;
+        display: block;
+        background: transparent !important;
+        margin-top:5px ;
+        margin-bottom: 10px;
+        caret-color: hsl(259, 100%, 35%)!important;
+        
+    }
+    .btn-cont{
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        position: relative;
+    }
+    .btn-cont button:hover{
+        background-color: hsl(0, 0%, 8%) ;
+    }
+    .btn-cont button {
+       background-color: hsl(259, 100%, 65%);
+       border: 0!important;
+       outline: 0!important;
+       padding: 10px;
+       border-radius: 50%;
+       z-index: 1000000!important;
+       position: absolute;
+       cursor: pointer;
+    }
+    .btn-cont button::before{
+        display: none;
+    }
+    .btn-cont::before{
+        position: absolute;
+        content: '';
+        width: 85%;
+        top:41% ;
+        left: 9%;
+        right: 9% ;
+        background: hsl(0, 0%, 86%);
+        height: 1px;
+        z-index: 0!important;
+    }
+    .age-result {
+        font-size: 30px;
+        font-weight: bolder!important;
+        margin-bottom: 40px!important;
+        margin-top: 15px;
+        position: absolute;
+        top : 46%;
+       
+    }
+    .age-result h2 i{
+        font-weight: bolder!important;
+         font-size: 50px;
+    }
+    span{
+        color: hsl(259, 100%, 65%);
+        font-size: 50px;
+        font-weight :bolder;
+       
+    }
 }
