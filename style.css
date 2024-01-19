@@ -130,12 +130,11 @@ span{
    
 }
 .valid {
-    display: none;
+    display:none;
     color: red;
 }
 .validate{
-    display: block;
-
+    display: block !important;
 }
 /* @media screen and (max-width: 620px){
     .age-container{

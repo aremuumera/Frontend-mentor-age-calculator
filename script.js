@@ -1,5 +1,5 @@
-let date = document.querySelector('#date');
-let month = document.querySelector('#month');
+let date = document.getElementById('date');
+let month = document.getElementById('month');
 let year = document.querySelector('#year');
 let label = document.getElementsByTagName('label');
 let validYear = document.querySelector('.valid-year');
@@ -66,7 +66,7 @@ if (y2 >= y1 && isValidYear){
 }
 
 console.log(y3);
-yearResult.innerHTML = y3;
+
 // this line of code below is to calculate for the month
 if (m2 >= m1 && isValidMonth){
     m3 = m2 - m1;
@@ -81,7 +81,7 @@ if (m2 >= m1 && isValidMonth){
 }else{
     return error;
 }
-monthResult.innerHTML = m3;
+
 console.log(m3);
 
 // this line of code below is to calculate for the day
@@ -100,7 +100,7 @@ if (d2 >= d1 && isValidDate){
 else{
     return error;
 }
-dayResult.innerHTML = d3;
+
 console.log(d3);
 if(m3 < 0){
     m3 = 11;
@@ -108,9 +108,11 @@ if(m3 < 0){
 } 
 
 // form validation error
+yearResult.innerHTML = y3;
+monthResult.innerHTML = m3;
+dayResult.innerHTML = d3;
 
-
-
+    
 const isValidation = () =>{
 
     if (!isValidYear){
@@ -140,45 +142,8 @@ const isValidation = () =>{
 
 isValidation();
 
+
 }
-
-// end of the function
-
-// let theUserValidDay = /^(0?[1-9]|1[0-2])$/;
-// let theUserValidMonth = /^(0?[1-9]|1[0-2])$/;
-
-// const validateMonth = () =>{
-//     if (month.value.match(theUserValidMonth)){
-//         validMonth.classList.remove('validate');
-//         month.style.borderColor = 'hsl(0, 0%, 86%)';
-//         // label.style.color = 'red';
-//     }else{
-//         validMonth.classList.add('validate');
-//         month.style.borderColor = 'red';
-//     }
-// }
-
-// month.addEventListener('click', () =>{
-//     validateMonth ();
-// })
-
-// const validateDay = () => {
-//     if (!date.value.match(theUserValidDay)){
-//         validDay.classList.add('valid');
-//         date.style.borderColor = 'red';
-//         return false;
-//     } else {
-//         validDay.classList.remove('valid');
-//         date.style.borderColor = 'hsl(0, 0%, 86%)';
-//         return true;
-//     }
-// }
-
-// date.addEventListener('click', () =>{
-//     validateDay ();
-// })
-
-
 
 // the function to generate the last day of the month which will return 31
 function getValidDate (year, month){
